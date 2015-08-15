@@ -5,11 +5,11 @@ var path = require('path');
 
 gulp.task('default', function() {
   // SWIG
-  gulp.src('src/*.swig')
+  gulp.src('./src/*.swig')
     .pipe(swig())
     .pipe(gulp.dest('./dist/'))
   // LESS
-  gulp.src('src/assets/less/*.less')
+  gulp.src('./src/assets/less/*.less')
     .pipe(less({
       paths: [ 
         path.join(__dirname, 'src', 'assets', 'less', 'includes'),
